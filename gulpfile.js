@@ -11,6 +11,11 @@ function styles() {
     .pipe(gulp.dest('dist/css'));
 }
 
+function html() {
+  return gulp.src('src/*.html')
+    .pipe(gulp.dest('dist'));
+}
+
 
 function images() {
   return gulp.src('src/images/**/*')
@@ -24,5 +29,5 @@ function watch(done) {
   done();
 }
 
-exports.default = gulp.series(styles, images);
+exports.default = gulp.series(styles, images, html);
 exports.watch = watch;
