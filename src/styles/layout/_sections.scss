@@ -1,0 +1,32 @@
+@use '../utils/variables' as v;
+
+.section {
+  padding: 80px 10%;
+  background-color: v.$blue-dark;
+
+  &--dark {
+    background-color: v.$black;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 40px;
+  background-color: v.$blue-dark;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+
+  img {
+    width: 100%;
+  }
+}

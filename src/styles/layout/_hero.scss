@@ -1,0 +1,41 @@
+@use '../utils/variables' as v;
+
+.hero {
+  position: relative;
+  height: 100vh;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("../images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero__content {
+  max-width: 600px;
+  z-index: 1;
+
+  h2 {
+    font-family: v.$font-title;
+    font-size: 3rem;
+    line-height: 1.1;
+
+    span {
+      color: v.$orange;
+    }
+  }
+
+  p {
+    margin-top: 16px;
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,43 @@
+@use '../utils/variables' as v;
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(11, 15, 20, 0.9);
+}
+
+.header__nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: v.$font-title;
+  font-size: 1.5rem;
+  color: v.$white;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-family: v.$font-title;
+  letter-spacing: 1px;
+
+  &--primary {
+    background-color: v.$orange;
+    color: v.$black;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 2px solid v.$orange;
+    color: v.$orange;
+  }
+}
